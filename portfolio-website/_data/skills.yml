@@ -1,0 +1,81 @@
+- category: "AI & Automation Tools"
+  items:
+    - "Cursor AI"
+    - "Model Context Protocol (MCP)"
+    - "Ollama"
+    - "Azure OpenAI"
+    - "GPT-4o"
+    - "RAG (Retrieval-Augmented Generation)"
+    - "Postman Flows"
+    - "PostBot"
+
+- category: "Test Automation Frameworks"
+  items:
+    - "Selenium WebDriver"
+    - "Appium"
+    - "Playwright"
+    - "Rest-Assured"
+    - "SpecFlow"
+    - "TestNG"
+    - "JUnit"
+    - "JUnit5"
+    - "WinApp Driver"
+
+- category: "Programming Languages"
+  items:
+    - "Python"
+    - "Java"
+    - "C#"
+    - "Ruby"
+    - "SQL"
+
+- category: "CI/CD & DevOps"
+  items:
+    - "Azure DevOps"
+    - "Jenkins"
+    - "GitHub Actions"
+    - "Docker"
+    - "Git"
+    - "Gradle"
+    - "Maven"
+
+- category: "Mobile Testing"
+  items:
+    - "iOS Test Automation"
+    - "Android Test Automation"
+    - "Appium"
+
+- category: "API Testing"
+  items:
+    - "Postman"
+    - "Rest-Assured"
+    - "RestSharp"
+    - "Charles Proxy"
+    - "Postman Flows"
+
+- category: "Methodologies & Practices"
+  items:
+    - "Agile"
+    - "Scrum"
+    - "BDD (Behavior-Driven Development)"
+    - "TDD (Test-Driven Development)"
+    - "SAFe (Scaled Agile Framework)"
+    - "Page Object Model"
+    - "Builder Pattern"
+    - "Clean Code"
+    - "SOLID Principles"
+
+- category: "Databases"
+  items:
+    - "Microsoft SQL Server"
+    - "SQL"
+    - "NoSQL"
+
+- category: "Testing Tools"
+  items:
+    - "JMeter"
+    - "BlazeMeter"
+    - "Rational Clear Quest"
+    - "Rational Requisite Pro"
+    - "Rational Quality Manager"
+

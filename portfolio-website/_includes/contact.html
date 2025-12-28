@@ -1,0 +1,53 @@
+<section class="contact section" id="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p class="contact-intro">
+                    I'm always open to discussing new opportunities, interesting projects, or just having a conversation 
+                    about software engineering, test automation, or AI-powered solutions.
+                </p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div class="contact-text">
+                            <strong>Email</strong>
+                            <a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div class="contact-text">
+                            <strong>Phone</strong>
+                            <a href="tel:{{ site.data.contact.phone }}">{{ site.data.contact.phone }}</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div class="contact-text">
+                            <strong>Location</strong>
+                            <span>{{ site.data.contact.location }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-section">
+                    <h4>Connect with me</h4>
+                    <div class="social-buttons">
+                        <a href="{{ site.data.contact.linkedin }}" target="_blank" rel="noopener noreferrer" class="social-btn linkedin">
+                            LinkedIn
+                        </a>
+                        <a href="{{ site.data.contact.github }}" target="_blank" rel="noopener noreferrer" class="social-btn github">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="resume-download">
+                    <a href="{{ '/enhanced_resume.pdf' | relative_url }}" class="btn btn-primary" target="_blank">
+                        Download Resume (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

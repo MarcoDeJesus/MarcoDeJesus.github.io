@@ -1,0 +1,43 @@
+<section class="education section" id="education">
+    <div class="container">
+        <h2 class="section-title">Education & Certifications</h2>
+        
+        <div class="education-content">
+            <div class="education-section">
+                <h3 class="subsection-title">Education</h3>
+                <div class="education-list">
+                    {% for edu in site.data.education %}
+                    <div class="education-item">
+                        <div class="education-header">
+                            <h4 class="education-degree">{{ edu.degree }}</h4>
+                            <span class="education-years">{{ edu.start_year }} - {{ edu.end_year }}</span>
+                        </div>
+                        <p class="education-institution">{{ edu.institution }}</p>
+                        {% if edu.field %}
+                        <p class="education-field">{{ edu.field }}</p>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="certifications-section">
+                <h3 class="subsection-title">Certifications</h3>
+                <div class="certifications-grid">
+                    {% for cert in site.data.certifications %}
+                    <div class="certification-item {% if cert.highlight %}highlight{% endif %}">
+                        <div class="cert-icon">🏆</div>
+                        <div class="cert-content">
+                            <h4 class="cert-name">{{ cert.name }}</h4>
+                            {% if cert.issuer %}
+                            <p class="cert-issuer">{{ cert.issuer }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

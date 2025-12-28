@@ -1,0 +1,656 @@
+@use 'sass:color';
+@import 'variables';
+
+// Buttons
+.btn {
+    display: inline-block;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $radius-md;
+    font-weight: 500;
+    text-align: center;
+    transition: all $transition-base;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: $primary-color;
+    color: white;
+    
+    &:hover {
+        background-color: color.adjust($primary-color, $lightness: -10%);
+        transform: translateY(-2px);
+        box-shadow: $shadow-md;
+    }
+}
+
+.btn-secondary {
+    background-color: $secondary-color;
+    color: white;
+    
+    &:hover {
+        background-color: color.adjust($secondary-color, $lightness: -10%);
+        transform: translateY(-2px);
+        box-shadow: $shadow-md;
+    }
+}
+
+.btn-outline {
+    border-color: $primary-color;
+    color: $primary-color;
+    
+    &:hover {
+        background-color: $primary-color;
+        color: white;
+    }
+}
+
+// Hero Section
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, $bg-light 0%, $bg-white 100%);
+    position: relative;
+    padding: $spacing-2xl 0;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-greeting {
+    display: block;
+    font-size: 1.25rem;
+    color: $text-light;
+    margin-bottom: $spacing-xs;
+}
+
+.hero-name {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: $spacing-sm;
+    
+    @media (max-width: $breakpoint-md) {
+        font-size: 2.5rem;
+    }
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: $primary-color;
+    margin-bottom: $spacing-md;
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    color: $text-light;
+    margin-bottom: $spacing-lg;
+    line-height: 1.8;
+}
+
+.hero-highlight {
+    margin-bottom: $spacing-lg;
+}
+
+.highlight-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+    background-color: $highlight-color;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $radius-lg;
+    font-weight: 600;
+    color: $text-dark;
+}
+
+.hero-actions {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: $spacing-xl;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-indicator {
+    display: block;
+    width: 30px;
+    height: 50px;
+    border: 2px solid $text-light;
+    border-radius: 15px;
+    position: relative;
+    
+    span {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 6px;
+        background-color: $text-light;
+        border-radius: 50%;
+        animation: scroll 2s infinite;
+    }
+}
+
+@keyframes scroll {
+    0%, 100% { top: 10px; opacity: 1; }
+    50% { top: 30px; opacity: 0.3; }
+}
+
+// About Section
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: $spacing-lg;
+    margin: $spacing-xl 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: $spacing-md;
+    background-color: $bg-light;
+    border-radius: $radius-md;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $primary-color;
+    display: block;
+}
+
+.stat-label {
+    color: $text-light;
+    font-size: 0.875rem;
+    margin-top: $spacing-xs;
+}
+
+.competencies-list {
+    list-style: none;
+    padding: 0;
+    
+    li {
+        padding: $spacing-xs 0;
+        padding-left: $spacing-lg;
+        position: relative;
+        
+        &::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: $accent-color;
+            font-weight: bold;
+        }
+    }
+}
+
+// Experience Section
+.experience-timeline {
+    position: relative;
+    padding-left: $spacing-lg;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: $border-color;
+    }
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: $spacing-xl;
+    padding-left: $spacing-xl;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        left: calc(-#{$spacing-lg} + 7px);
+        top: 0;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        border: 3px solid $bg-white;
+        box-shadow: 0 0 0 3px $border-color;
+    }
+}
+
+.timeline-content {
+    background-color: $bg-white;
+    border: 1px solid $border-color;
+    border-radius: $radius-lg;
+    padding: $spacing-lg;
+    box-shadow: $shadow-sm;
+    transition: all $transition-base;
+    
+    &:hover {
+        box-shadow: $shadow-md;
+        transform: translateY(-2px);
+    }
+}
+
+.job-header {
+    margin-bottom: $spacing-md;
+}
+
+.job-title {
+    font-size: 1.5rem;
+    color: $text-dark;
+    margin-bottom: $spacing-xs;
+}
+
+.job-company {
+    font-size: 1.25rem;
+    color: $primary-color;
+    margin-bottom: $spacing-xs;
+}
+
+.job-meta {
+    display: flex;
+    gap: $spacing-md;
+    color: $text-light;
+    font-size: 0.875rem;
+    flex-wrap: wrap;
+}
+
+.job-technologies {
+    margin-bottom: $spacing-md;
+    
+    strong {
+        color: $text-dark;
+        display: block;
+        margin-bottom: $spacing-xs;
+    }
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+}
+
+.tech-tag {
+    background-color: $bg-light;
+    color: $text-dark;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $radius-sm;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.achievements-list {
+    list-style: none;
+    padding: 0;
+    
+    li {
+        padding: $spacing-sm 0;
+        padding-left: $spacing-lg;
+        position: relative;
+        color: $text-light;
+        
+        &::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        
+        &.highlight {
+            background-color: $highlight-color;
+            padding: $spacing-sm $spacing-md;
+            border-radius: $radius-md;
+            margin: $spacing-xs 0;
+            font-weight: 500;
+            color: $text-dark;
+        }
+    }
+}
+
+// Skills Section
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-lg;
+}
+
+.skill-category {
+    background-color: $bg-light;
+    padding: $spacing-lg;
+    border-radius: $radius-lg;
+    border: 1px solid $border-color;
+}
+
+.category-title {
+    font-size: 1.25rem;
+    color: $text-dark;
+    margin-bottom: $spacing-md;
+    padding-bottom: $spacing-sm;
+    border-bottom: 2px solid $primary-color;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+}
+
+.skill-tag {
+    background-color: $bg-white;
+    color: $text-dark;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $radius-sm;
+    font-size: 0.875rem;
+    border: 1px solid $border-color;
+    transition: all $transition-fast;
+    
+    &:hover {
+        background-color: $primary-color;
+        color: white;
+        border-color: $primary-color;
+    }
+}
+
+// Projects Section
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-lg;
+}
+
+.project-card {
+    background-color: $bg-white;
+    border: 1px solid $border-color;
+    border-radius: $radius-lg;
+    padding: $spacing-lg;
+    box-shadow: $shadow-sm;
+    transition: all $transition-base;
+    
+    &:hover {
+        box-shadow: $shadow-lg;
+        transform: translateY(-4px);
+    }
+    
+    &.featured {
+        border-color: $primary-color;
+        border-width: 2px;
+    }
+}
+
+.project-icon {
+    font-size: 3rem;
+    margin-bottom: $spacing-md;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: $text-dark;
+    margin-bottom: $spacing-sm;
+}
+
+.project-description {
+    color: $text-light;
+    margin-bottom: $spacing-md;
+    line-height: 1.7;
+}
+
+.project-metrics {
+    display: flex;
+    gap: $spacing-md;
+    margin-bottom: $spacing-md;
+    padding: $spacing-md;
+    background-color: $bg-light;
+    border-radius: $radius-md;
+}
+
+.metric {
+    text-align: center;
+    flex: 1;
+}
+
+.metric-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary-color;
+}
+
+.metric-label {
+    display: block;
+    font-size: 0.875rem;
+    color: $text-light;
+    margin-top: $spacing-xs;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+}
+
+.tech-badge {
+    background-color: $bg-light;
+    color: $text-dark;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $radius-sm;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+// Education Section
+.education-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+    
+    @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+}
+
+.education-item {
+    padding: $spacing-md;
+    background-color: $bg-light;
+    border-radius: $radius-md;
+    border-left: 4px solid $primary-color;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: $spacing-xs;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+}
+
+.education-degree {
+    font-size: 1.125rem;
+    color: $text-dark;
+    font-weight: 600;
+}
+
+.education-years {
+    color: $text-light;
+    font-size: 0.875rem;
+}
+
+.education-institution {
+    color: $primary-color;
+    font-weight: 500;
+    margin-bottom: $spacing-xs;
+}
+
+.education-field {
+    color: $text-light;
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: $spacing-md;
+}
+
+.certification-item {
+    display: flex;
+    align-items: start;
+    gap: $spacing-sm;
+    padding: $spacing-md;
+    background-color: $bg-light;
+    border-radius: $radius-md;
+    border: 1px solid $border-color;
+    transition: all $transition-base;
+    
+    &:hover {
+        box-shadow: $shadow-md;
+        transform: translateY(-2px);
+    }
+    
+    &.highlight {
+        border-color: $primary-color;
+        border-width: 2px;
+        background-color: rgba($primary-color, 0.05);
+    }
+}
+
+.cert-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.cert-name {
+    font-size: 1rem;
+    color: $text-dark;
+    font-weight: 600;
+    margin-bottom: $spacing-xs;
+}
+
+.cert-issuer {
+    font-size: 0.875rem;
+    color: $text-light;
+}
+
+// Contact Section
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-intro {
+    font-size: 1.125rem;
+    color: $text-light;
+    margin-bottom: $spacing-xl;
+    line-height: 1.8;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+}
+
+.contact-item {
+    display: flex;
+    align-items: start;
+    gap: $spacing-md;
+    text-align: left;
+    padding: $spacing-md;
+    background-color: $bg-light;
+    border-radius: $radius-md;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.contact-text {
+    strong {
+        display: block;
+        color: $text-dark;
+        margin-bottom: $spacing-xs;
+    }
+    
+    a, span {
+        color: $text-light;
+        
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.social-section {
+    margin-bottom: $spacing-xl;
+    
+    h4 {
+        margin-bottom: $spacing-md;
+        color: $text-dark;
+    }
+}
+
+.social-buttons {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $radius-md;
+    font-weight: 500;
+    transition: all $transition-base;
+    
+    &.linkedin {
+        background-color: #0077b5;
+        color: white;
+        
+        &:hover {
+            background-color: color.adjust(#0077b5, $lightness: -10%);
+        }
+    }
+    
+    &.github {
+        background-color: $text-dark;
+        color: white;
+        
+        &:hover {
+            background-color: color.adjust($text-dark, $lightness: 10%);
+        }
+    }
+}
+
+.resume-download {
+    margin-top: $spacing-xl;
+}
+

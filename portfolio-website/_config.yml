@@ -1,0 +1,54 @@
+# Site Settings
+title: "Marco De Jesus - Software Development Engineer in Test"
+description: "Experienced Engineering Manager and QA Automation Leader with 14+ years in software engineering, platform automation, and quality assurance. Expert in AI-powered test automation."
+author: "Marco De Jesus"
+email: "marco_dejesus@live.com"
+url: "https://marcodejesus.github.io"
+baseurl: ""
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Sass/SCSS Settings
+sass:
+  style: compressed
+
+# Collections
+collections:
+  projects:
+    output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Social Links
+social:
+  linkedin: "https://www.linkedin.com/in/marco-antonio-de-jesus-ciriaco/"
+  github: "https://github.com/marcodejesus"
+  email: "marco_dejesus@live.com"
+  phone: "+1 858 933 4510"
+
+# SEO
+lang: en-US
+google_analytics: ""
+
