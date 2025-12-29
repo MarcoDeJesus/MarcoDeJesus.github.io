@@ -1,22 +1,32 @@
+- name: "Solution Architect Certificate"
+  issuer: "EPAM CTO Office"
+  year: "2020"
+  highlight: true
+  pdf_file: "certificates/solution-architect-certificate.pdf"
+
 - name: "ISTQB Foundation Level Certified"
   issuer: "International Software Testing Qualifications Board"
-  year: ""
+  year: "2016"
   highlight: true
+  pdf_file: "certificates/istqb-certificate.pdf"
 
 - name: "SAFe 4 Agilist Certified"
   issuer: "Scaled Agile Framework"
   year: ""
   highlight: true
+  badge_url: "https://www.credly.com/badges/b9f785d4-09da-4d51-b6bd-d74b344fab79/linked_in_profile"
 
 - name: "SCRUM Master Certified"
   issuer: "Agile Project Management"
-  year: ""
+  year: "2016"
   highlight: true
+  pdf_file: "certificates/scrum-master-certified.pdf"
 
 - name: "Six Sigma Yellow Belt Certified"
   issuer: "Process Improvement"
-  year: ""
+  year: "2016"
   highlight: true
+  pdf_file: "certificates/six-sigma-yellow-belt.pdf"
 
 - name: "Transitioning from Technical Professional to Manager"
   issuer: ""

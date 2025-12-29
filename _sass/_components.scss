@@ -544,6 +544,11 @@
     flex-shrink: 0;
 }
 
+.cert-content {
+    flex: 1;
+    min-width: 0;
+}
+
 .cert-name {
     font-size: 1rem;
     color: $text-dark;
@@ -554,6 +559,45 @@
 .cert-issuer {
     font-size: 0.875rem;
     color: $text-light;
+    margin-bottom: $spacing-xs;
+}
+
+.cert-download {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+    margin-top: $spacing-sm;
+    padding: $spacing-xs $spacing-sm;
+    font-size: 0.875rem;
+    color: $primary-color;
+    text-decoration: none;
+    border: 1px solid $primary-color;
+    border-radius: $radius-sm;
+    transition: all $transition-base;
+    font-weight: 500;
+    
+    &:hover {
+        background-color: $primary-color;
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba($primary-color, 0.2);
+    }
+    
+    .download-icon,
+    .badge-icon {
+        font-size: 1rem;
+    }
+    
+    &.cert-badge-link {
+        border-color: #0077b5;
+        color: #0077b5;
+        
+        &:hover {
+            background-color: #0077b5;
+            color: white;
+            box-shadow: 0 2px 4px rgba(#0077b5, 0.2);
+        }
+    }
 }
 
 // Contact Section

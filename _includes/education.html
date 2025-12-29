@@ -32,6 +32,19 @@
                             {% if cert.issuer %}
                             <p class="cert-issuer">{{ cert.issuer }}</p>
                             {% endif %}
+                            {% if cert.pdf_file %}
+                            <a href="{{ cert.pdf_file | relative_url }}" class="cert-download" target="_blank" download>
+                                <span class="download-icon">📥</span> Download PDF
+                            </a>
+                            {% elsif cert.image_file %}
+                            <a href="{{ cert.image_file | relative_url }}" class="cert-download" target="_blank" download>
+                                <span class="download-icon">📥</span> Download
+                            </a>
+                            {% elsif cert.badge_url %}
+                            <a href="{{ cert.badge_url }}" class="cert-download cert-badge-link" target="_blank" rel="noopener noreferrer">
+                                <span class="badge-icon">🏅</span> View Badge
+                            </a>
+                            {% endif %}
                         </div>
                     </div>
                     {% endfor %}
