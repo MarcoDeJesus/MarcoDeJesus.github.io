@@ -1,4 +1,3 @@
-@use 'sass:color';
 @import 'variables';
 
 // Header & Navigation
@@ -100,7 +99,7 @@
         border-radius: $radius-md;
         
         &:hover {
-            background-color: color.adjust($primary-color, $lightness: -10%);
+            background-color: darken($primary-color, 10%);
             color: white;
         }
     }

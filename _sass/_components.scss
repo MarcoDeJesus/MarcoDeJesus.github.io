@@ -1,4 +1,3 @@
-@use 'sass:color';
 @import 'variables';
 
 // Buttons
@@ -18,7 +17,7 @@
     color: white;
     
     &:hover {
-        background-color: color.adjust($primary-color, $lightness: -10%);
+        background-color: darken($primary-color, 10%);
         transform: translateY(-2px);
         box-shadow: $shadow-md;
     }
@@ -29,7 +28,7 @@
     color: white;
     
     &:hover {
-        background-color: color.adjust($secondary-color, $lightness: -10%);
+        background-color: darken($secondary-color, 10%);
         transform: translateY(-2px);
         box-shadow: $shadow-md;
     }
@@ -636,7 +635,7 @@
         color: white;
         
         &:hover {
-            background-color: color.adjust(#0077b5, $lightness: -10%);
+            background-color: darken(#0077b5, 10%);
         }
     }
     
@@ -645,7 +644,7 @@
         color: white;
         
         &:hover {
-            background-color: color.adjust($text-dark, $lightness: 10%);
+            background-color: lighten($text-dark, 10%);
         }
     }
 }
