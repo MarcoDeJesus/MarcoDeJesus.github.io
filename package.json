@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Portfolio website with presentation PDF generation",
+  "scripts": {
+    "generate-pdf": "node generate_pdf.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}

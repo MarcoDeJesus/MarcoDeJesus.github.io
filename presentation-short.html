@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco De Jesus - Professional Presentation (Short)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1f2937;
+            color: #1f2937;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            padding: 60px 80px;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+            overflow-y: auto;
+            transition: opacity 0.5s ease;
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 1;
+        }
+
+        .slide-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .slide-subtitle {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .section-divider {
+            background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+            color: white;
+            text-align: center;
+            padding: 80px;
+        }
+
+        .section-divider h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .section-divider p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .content-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #2563eb;
+        }
+
+        .content-card h3 {
+            font-size: 1.5rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+
+        .content-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .content-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-value {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .highlight-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .highlight-box strong {
+            color: #92400e;
+        }
+
+        .intro-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-name {
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .intro-title {
+            font-size: 2rem;
+            color: #2563eb;
+            margin-bottom: 2rem;
+        }
+
+        .intro-description {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            font-size: 1.1rem;
+            color: #6b7280;
+        }
+
+        .contact-item strong {
+            color: #1f2937;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .slide-counter {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #2563eb;
+            transition: width 0.3s ease;
+            z-index: 1000;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .tech-tag {
+            background: #e0e7ff;
+            color: #2563eb;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.75rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-metric {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #10b981;
+            margin: 1rem 0;
+        }
+
+        .closing-slide {
+            text-align: center;
+            background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+            color: white;
+        }
+
+        .closing-slide h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .closing-slide p {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .download-buttons {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 1001;
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+
+        .download-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15);
+        }
+
+        .download-btn.secondary {
+            background: #2563eb;
+        }
+
+        .download-btn.secondary:hover {
+            background: #1d4ed8;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .slide {
+                display: block !important;
+                page-break-after: always;
+                position: relative;
+                height: auto;
+                min-height: 100vh;
+            }
+            .navigation {
+                display: none;
+            }
+            .download-buttons {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 40px 30px;
+            }
+            .slide-title {
+                font-size: 2.5rem;
+            }
+            .intro-name {
+                font-size: 3rem;
+            }
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            .benefit-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="download-buttons">
+        <a href="/presentation.pdf" class="download-btn" download>Download Full (21 slides)</a>
+        <a href="/presentation-short.pdf" class="download-btn secondary" download>Download Short (6 slides)</a>
+    </div>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="presentation-container">
+        
+        <!-- Title Slide -->
+        <div class="slide active">
+            <div class="intro-content">
+                <h1 class="intro-name">Marco De Jesus</h1>
+                <p class="intro-title">Software Development Engineer in Test | QA Automation Manager</p>
+                <p class="intro-description">
+                    14+ years of experience transforming testing efficiency through AI-powered automation.<br>
+                    Expert in Cursor AI, Model Context Protocol, and multi-LLM agents.
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item"><strong>Email:</strong> marco_dejesus@live.com</div>
+                    <div class="contact-item"><strong>Phone:</strong> +1 858 933 4510</div>
+                    <div class="contact-item"><strong>Location:</strong> San Diego, CA</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide: Professional Overview -->
+        <div class="slide">
+            <h2 class="slide-title">Professional Overview</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Experience</h3>
+                    <ul>
+                        <li>14+ years in software engineering</li>
+                        <li>QA Automation Leader</li>
+                        <li>Engineering Manager</li>
+                        <li>Platform automation expert</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>Current Role</h3>
+                    <ul>
+                        <li>Software QA Automation Manager</li>
+                        <li>Axos Bank, San Diego, CA</li>
+                        <li>3+ years in current position</li>
+                        <li>Leading AI-powered test automation</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>Core Competencies</h3>
+                    <ul>
+                        <li>Leadership (45+ team members)</li>
+                        <li>AI-powered test automation</li>
+                        <li>CI/CD pipelines & DevOps</li>
+                        <li>Cross-functional collaboration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide: Key Differentiators -->
+        <div class="slide">
+            <h2 class="slide-title">What Makes Me Unique</h2>
+            <div class="content-grid">
+                <div class="highlight-box">
+                    <strong>🚀 AI Innovation Leader</strong><br>
+                    Pioneering the use of Cursor AI, Model Context Protocol, and multi-LLM agents for test automation
+                </div>
+                <div class="highlight-box">
+                    <strong>📊 Quantifiable Results</strong><br>
+                    Transformed API automation: 6 months with 4 engineers → 4 weeks as solo engineer
+                </div>
+                <div class="highlight-box">
+                    <strong>💼 Business Impact Focus</strong><br>
+                    Every technical achievement is tied to measurable business value and ROI
+                </div>
+                <div class="highlight-box">
+                    <strong>👥 Leadership Experience</strong><br>
+                    Managed teams of 15+ engineers, improved team competency by 40% in first year
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide: API Automation Transformation -->
+        <div class="slide">
+            <h2 class="slide-title">API Automation Transformation</h2>
+            <div class="two-column">
+                <div>
+                    <div class="metric-card" style="background: linear-gradient(135deg, #ef4444 0%, #f59e0b 100%);">
+                        <div class="metric-value">6 months</div>
+                        <div class="metric-label">Previous Timeline<br>(4 Engineers)</div>
+                    </div>
+                    <div style="text-align: center; font-size: 3rem; margin: 1rem 0; color: #2563eb;">↓</div>
+                    <div class="metric-card" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);">
+                        <div class="metric-value">4 weeks</div>
+                        <div class="metric-label">Achieved Timeline<br>(1 Engineer)</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="content-card">
+                        <h3>Transformation Results</h3>
+                        <ul>
+                            <li><strong>Coverage:</strong> 40% → 95%</li>
+                            <li><strong>Cost Reduction:</strong> 75%</li>
+                            <li><strong>Release Cycles:</strong> 300% faster</li>
+                            <li><strong>Team Efficiency:</strong> 6x improvement</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-box" style="margin-top: 1.5rem;">
+                        <strong>Impact:</strong> Achieved in 1 month what previously required 6 months with a 4-person team, reducing costs by 75% while accelerating release cycles by 300%.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide: Summary of Benefits -->
+        <div class="slide">
+            <h2 class="slide-title">Summary: Value Proposition</h2>
+            <div class="content-grid">
+                <div class="metric-card">
+                    <div class="metric-value">$50K+</div>
+                    <div class="metric-label">Annual Cost Savings</div>
+                </div>
+                <div class="metric-card" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);">
+                    <div class="metric-value">97%</div>
+                    <div class="metric-label">Time Reduction</div>
+                </div>
+                <div class="metric-card" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);">
+                    <div class="metric-value">300%</div>
+                    <div class="metric-label">Faster Releases</div>
+                </div>
+                <div class="metric-card" style="background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);">
+                    <div class="metric-value">90%</div>
+                    <div class="metric-label">Test Coverage</div>
+                </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 2rem; font-size: 1.25rem;">
+                <strong>Bottom Line:</strong> I bring proven expertise in AI-powered automation that delivers measurable business value: reduced costs, faster time-to-market, improved quality, and innovative solutions that give your company a competitive edge.
+            </div>
+        </div>
+
+        <!-- Closing Slide -->
+        <div class="slide closing-slide">
+            <h1>Thank You</h1>
+            <p style="font-size: 2rem; margin-bottom: 3rem;">Let's Build Something Great Together</p>
+            <div style="font-size: 1.5rem; line-height: 2.5;">
+                <p><strong>Marco De Jesus</strong></p>
+                <p>Software Development Engineer in Test | QA Automation Manager</p>
+                <p style="margin-top: 2rem;">📧 marco_dejesus@live.com</p>
+                <p>📱 +1 858 933 4510</p>
+                <p>📍 San Diego, California</p>
+                <p style="margin-top: 2rem;">
+                    <a href="https://www.linkedin.com/in/marco-antonio-de-jesus-ciriaco/" target="_blank" style="color: white; text-decoration: underline;">LinkedIn</a> | 
+                    <a href="https://marcodejesus.github.io" target="_blank" style="color: white; text-decoration: underline;">Portfolio</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <div class="slide-counter">
+            <span id="currentSlide">1</span> / <span id="totalSlides">6</span>
+        </div>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const progressBar = document.getElementById('progressBar');
+        const currentSlideSpan = document.getElementById('currentSlide');
+        const totalSlidesSpan = document.getElementById('totalSlides');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        totalSlidesSpan.textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) {
+                currentSlide = totalSlides - 1;
+            } else if (n < 0) {
+                currentSlide = 0;
+            } else {
+                currentSlide = n;
+            }
+
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                }
+            });
+
+            // Update progress bar
+            const progress = ((currentSlide + 1) / totalSlides) * 100;
+            progressBar.style.width = progress + '%';
+
+            // Update slide counter
+            currentSlideSpan.textContent = currentSlide + 1;
+
+            // Update button states
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+
+            // Scroll to top of slide
+            slides[currentSlide].scrollTop = 0;
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                changeSlide(-1);
+            } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+                e.preventDefault();
+                changeSlide(1);
+            } else if (e.key === 'Home') {
+                showSlide(0);
+            } else if (e.key === 'End') {
+                showSlide(totalSlides - 1);
+            }
+        });
+
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                changeSlide(1); // Swipe left - next
+            }
+            if (touchEndX > touchStartX + 50) {
+                changeSlide(-1); // Swipe right - previous
+            }
+        }
+
+        // Initialize
+        showSlide(0);
+
+        // Fullscreen on F11
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'F11') {
+                e.preventDefault();
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen();
+                } else {
+                    document.exitFullscreen();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
