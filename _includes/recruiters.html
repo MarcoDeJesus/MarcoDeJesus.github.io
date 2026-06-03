@@ -1,0 +1,20 @@
+<section class="recruiters section" id="recruiters">
+    <div class="container">
+        <h2 class="section-title">{{ site.data.recruiter.heading }}</h2>
+        <div class="recruiter-card">
+            <h3 class="recruiter-subheading">{{ site.data.recruiter.subheading }}</h3>
+            <blockquote class="recruiter-quote">
+                <p>{{ site.data.recruiter.quote }}</p>
+            </blockquote>
+            <div class="rate-card-summary">
+                <h4>Rate Card Summary</h4>
+                <ul>
+                    {% for rate in site.data.recruiter.rate_summary %}
+                    <li>{{ rate }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <p class="payment-terms"><strong>Payment Terms:</strong> {{ site.data.recruiter.payment_terms }}</p>
+        </div>
+    </div>
+</section>

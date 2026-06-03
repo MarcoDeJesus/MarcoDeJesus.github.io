@@ -1,0 +1,11 @@
+items:
+  - title: "AI-Powered Automation"
+    description: "Cursor AI, MCP, multi-LLM agents (Ollama, GPT-4o). Delivered 300% release acceleration in 4 weeks as solo engineer."
+  - title: "Test Framework Architecture"
+    description: "Zero → 90% coverage across Web, Mobile, API. Built for maintainability, not heroics."
+  - title: "Cost Reduction"
+    description: "Cut AI API spend by $50K/year. Reduced regression from 3 days → 1 hour."
+  - title: "Team Enablement"
+    description: "15+ engineers mentored. 50+ students trained — 80% hired into automation roles."
+  - title: "CI/CD Integration"
+    description: "Azure DevOps, Jenkins, GitHub Actions. Manual deployment time reduced 60%."

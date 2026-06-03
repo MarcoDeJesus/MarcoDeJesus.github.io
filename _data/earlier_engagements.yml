@@ -1,0 +1,13 @@
+items:
+  - role: "Software QA Analyst"
+    company: "Herbalife"
+    result: "30% → 70% automation coverage. 200+ defects. Scrum Master: velocity +30%."
+  - role: "Sr. QA Analyst"
+    company: "Softtek"
+    result: "STLC implementation. Test effectiveness +35%. Cycle time -25%. 5 juniors → mid-level."
+  - role: "Software Tester"
+    company: "UST Global"
+    result: "Functional + accessibility testing. Production defects -40%."
+  - role: "Fullstack Developer"
+    company: "Universidad Tecnológica de León"
+    result: "Java web apps. 99.5% uptime."

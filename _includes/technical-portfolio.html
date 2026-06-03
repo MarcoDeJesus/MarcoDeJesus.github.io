@@ -1,0 +1,23 @@
+<section class="technical-portfolio section" id="portfolio">
+    <div class="container">
+        <h2 class="section-title">Technical Portfolio: Tools → Business Impact</h2>
+        <div class="table-wrapper">
+            <table class="portfolio-table">
+                <thead>
+                    <tr>
+                        <th>Technology</th>
+                        <th>Business Result Delivered</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in site.data.technical_portfolio.items %}
+                    <tr>
+                        <td data-label="Technology"><strong>{{ row.technology }}</strong></td>
+                        <td data-label="Result">{{ row.result }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

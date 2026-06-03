@@ -1,0 +1,25 @@
+<section class="earlier-engagements section" id="earlier">
+    <div class="container">
+        <h2 class="section-title">Earlier Engagements</h2>
+        <div class="table-wrapper">
+            <table class="earlier-table">
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>Company</th>
+                        <th>Key Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in site.data.earlier_engagements.items %}
+                    <tr>
+                        <td data-label="Role">{{ row.role }}</td>
+                        <td data-label="Company"><strong>{{ row.company }}</strong></td>
+                        <td data-label="Result">{{ row.result }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

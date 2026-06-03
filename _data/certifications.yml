@@ -1,16 +1,10 @@
-- name: "Solution Architect Certificate"
-  issuer: "EPAM CTO Office"
-  year: "2020"
-  highlight: true
-  pdf_file: "certificates/solution-architect-certificate.pdf"
-
-- name: "ISTQB Foundation Level Certified"
+- name: "ISTQB Foundation Level"
   issuer: "International Software Testing Qualifications Board"
   year: "2016"
   highlight: true
   pdf_file: "certificates/istqb-certificate.pdf"
 
-- name: "SAFe 4 Agilist Certified"
+- name: "SAFe 4 Agilist"
   issuer: "Scaled Agile Framework"
   year: ""
   highlight: true
@@ -22,29 +16,8 @@
   highlight: true
   pdf_file: "certificates/scrum-master-certified.pdf"
 
-- name: "Six Sigma Yellow Belt Certified"
+- name: "Six Sigma Yellow Belt"
   issuer: "Process Improvement"
   year: "2016"
   highlight: true
   pdf_file: "certificates/six-sigma-yellow-belt.pdf"
-
-- name: "Transitioning from Technical Professional to Manager"
-  issuer: ""
-  year: ""
-
-- name: "Brain-Based E-learning Design"
-  issuer: ""
-  year: ""
-
-- name: "Inclusive Instructional Design"
-  issuer: ""
-  year: ""
-
-- name: "Training with Stories"
-  issuer: ""
-  year: ""
-
-- name: "Using Neuroscience for More Effective L&D"
-  issuer: ""
-  year: ""
-
