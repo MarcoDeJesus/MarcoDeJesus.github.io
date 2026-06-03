@@ -6,7 +6,7 @@
                     <span class="hero-name">{{ site.data.contact.name | upcase }}</span>
                 </h1>
                 <p class="hero-subtitle">{{ site.data.contact.tagline }}</p>
-                <p class="hero-location">📍 {{ site.data.contact.location_b2b }} · {{ site.data.contact.location_w2 }}</p>
+                <p class="hero-location">📍 {{ site.data.contact.current_role }}</p>
                 <p class="hero-contact-line">
                     <a href="tel:{{ site.data.contact.phone }}">📞 {{ site.data.contact.phone }}</a>
                     <span class="contact-sep">|</span>
@@ -21,7 +21,7 @@
                     </div>
                 </div>
 
-                <p class="hero-fork-prompt">I'm hiring for:</p>
+                <p class="hero-fork-prompt">{{ site.data.contact.hero_fork_prompt }}</p>
                 <div class="path-fork-cards">
                     <a href="#{{ site.data.paths.b2b.anchor }}" class="path-fork-card path-fork-card--b2b">
                         <span class="path-fork-card-label">{{ site.data.paths.b2b.label }}</span>
