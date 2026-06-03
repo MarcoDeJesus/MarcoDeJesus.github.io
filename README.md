@@ -10,19 +10,20 @@ Jekyll site for B2B automation services positioning (primary) with W2 full-time 
 
 ## Sections
 
-1. **Hero** — B2B tagline, contact inline, CTAs (contact, engagements, live demo)
-2. **Value Proposition** — 1099/C2C positioning
-3. **Engagement Model** — Rate card (hourly, sprint, project, retainer)
-4. **Core Competencies** — Measurable impact bullets
-5. **Technical Portfolio** — Technology → business result table
-6. **Technical Demo Repository** (`#demo-project`) — GitHub repo, live demo, test reports
-7. **Professional Engagements** — Top 5 contractor/client roles
-8. **Earlier Engagements** — Compact history table
-9. **Technical Proficiency** — Skills by domain
-10. **Education & Certifications** — Degrees, certs, languages
-11. **Recruiters** — B2B rate card + W2 full-time blurb (each with PDF download)
-12. **Download Resume** (`#resumes`) — B2B contractor and W2 full-time PDFs
-13. **Contact** — Dual availability CTA + demo + repo links
+1. **Hero** — Dual tagline; B2B/W2 resume CTAs; contact, live demo, GitHub (demo repo)
+2. **Value Proposition** — B2B + W2 positioning
+3. **For Tech Recruiters** (`#for-recruiters`) — B2B and W2 paths with PDF downloads (`#recruiter-b2b`, `#recruiter-w2`)
+4. **Engagement Model** — B2B rate card (W2 note points to recruiters section)
+5. **Core Competencies** — Measurable impact bullets
+6. **Technical Portfolio** — Technology → business result table
+7. **Technical Demo Repository** (`#demo-project`) — GitHub repo, live demo, test reports
+8. **Professional Engagements** — Top 5 contractor/client roles
+9. **Earlier Engagements** — Compact history table
+10. **Technical Proficiency** — Skills by domain
+11. **Education & Certifications** — Degrees, certs, languages
+12. **Contact** — Dual availability + link to recruiter resumes
+
+`enhanced_resume.pdf` is excluded from the Jekyll build (not published).
 
 ## Resume PDFs
 

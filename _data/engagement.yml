@@ -1,4 +1,5 @@
-payment_note: "All rates USD. Invoiced net-30. Wire / transfer. No W2. No overhead. Just delivery."
+section_note: "B2B contractor rates below. W2 full-time candidates: download the W2 resume in the recruiters section."
+payment_note: "All rates USD. Invoiced net-30. Wire / transfer. B2B engagements only — no overhead, just delivery."
 models:
   - model: "Hourly"
     rate: "$85 – $110/hr"

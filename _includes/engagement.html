@@ -1,6 +1,9 @@
 <section class="engagement section" id="engagement">
     <div class="container">
         <h2 class="section-title">Engagement Model</h2>
+        {% if site.data.engagement.section_note %}
+        <p class="engagement-section-note">{{ site.data.engagement.section_note }}</p>
+        {% endif %}
         <div class="table-wrapper">
             <table class="rates-table">
                 <thead>

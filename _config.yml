@@ -16,6 +16,7 @@ plugins:
 
 # Exclude from processing
 exclude:
+  - enhanced_resume.pdf
   - Gemfile
   - Gemfile.lock
   - node_modules
@@ -44,7 +45,7 @@ defaults:
 # Social Links
 social:
   linkedin: "https://www.linkedin.com/in/marco-antonio-de-jesus-ciriaco/"
-  github: "https://github.com/marcodejesus"
+  github: "https://github.com/MarcoDeJesus/ecommerce-fullstack-automation-portfolio"
   email: "marco_dejesus@live.com"
   phone: "+1 858 933 4510"
 

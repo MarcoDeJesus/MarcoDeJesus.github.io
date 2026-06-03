@@ -114,6 +114,26 @@
     gap: $spacing-md;
     justify-content: center;
     flex-wrap: wrap;
+
+    &--recruiter {
+        flex-direction: column;
+        align-items: center;
+        gap: $spacing-md;
+    }
+}
+
+.hero-actions-primary,
+.hero-actions-secondary {
+    display: flex;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-actions-primary {
+    .btn {
+        min-width: 140px;
+    }
 }
 
 .hero-scroll {
@@ -870,6 +890,41 @@
     font-size: 0.95rem;
 }
 
+.recruiter-hub-intro {
+    text-align: center;
+    color: $text-light;
+    margin: (-$spacing-sm) auto $spacing-lg;
+    max-width: 640px;
+}
+
+.recruiter-resume-meta {
+    margin: 0 0 $spacing-sm;
+    font-size: 0.9rem;
+    color: $primary-color;
+    font-weight: 600;
+}
+
+.engagement-section-note {
+    text-align: center;
+    color: $text-light;
+    margin: (-$spacing-sm) auto $spacing-md;
+    max-width: 720px;
+}
+
+.contact-recruiter-cta {
+    margin: $spacing-md 0 $spacing-lg;
+    text-align: center;
+
+    a {
+        color: $primary-color;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 // B2B: Recruiter cards
 .recruiter-cards {
     display: grid;
@@ -886,6 +941,11 @@
     border-radius: $radius-lg;
     padding: $spacing-lg;
     border: 1px solid $border-color;
+    scroll-margin-top: 100px;
+
+    &--primary {
+        border-color: $primary-color;
+    }
 }
 
 .recruiter-download {
