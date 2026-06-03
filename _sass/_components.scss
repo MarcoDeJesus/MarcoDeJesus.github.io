@@ -1010,6 +1010,11 @@
         color: darken($accent-color, 15%);
     }
 
+    &--full-time {
+        border-color: $border-color;
+        color: $text-dark;
+    }
+
     &--contract {
         color: $text-light;
     }
