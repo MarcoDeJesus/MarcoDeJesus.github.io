@@ -4,8 +4,10 @@
         <div class="contact-content">
             <div class="contact-info">
                 <p class="contact-intro">
-                    Available for B2B automation engagements as a 1099 or Corp-to-Corp contractor.
-                    Remote from Mexico (US time zone). Invoices in USD — no W2, no overhead, just delivery.
+                    {{ site.data.contact.availability_b2b }}
+                </p>
+                <p class="contact-intro contact-intro--w2">
+                    {{ site.data.contact.availability_w2 }}
                 </p>
                 <div class="contact-details">
                     <div class="contact-item">
@@ -42,13 +44,12 @@
                         <a href="{{ site.data.contact.demo_url }}" target="_blank" rel="noopener noreferrer" class="social-btn demo">
                             Live Demo
                         </a>
+                        <a href="{{ site.data.contact.demo_repo_url }}" target="_blank" rel="noopener noreferrer" class="social-btn repo">
+                            Demo Repo
+                        </a>
                     </div>
                 </div>
-                <div class="resume-download">
-                    <a href="{{ '/enhanced_resume.pdf' | relative_url }}" class="btn btn-primary" target="_blank">
-                        Download Resume (PDF)
-                    </a>
-                </div>
+                {% include resume-downloads.html compact=true %}
             </div>
         </div>
     </div>

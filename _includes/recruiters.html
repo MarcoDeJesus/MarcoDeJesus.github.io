@@ -1,20 +1,40 @@
 <section class="recruiters section" id="recruiters">
     <div class="container">
         <h2 class="section-title">{{ site.data.recruiter.heading }}</h2>
-        <div class="recruiter-card">
-            <h3 class="recruiter-subheading">{{ site.data.recruiter.subheading }}</h3>
-            <blockquote class="recruiter-quote">
-                <p>{{ site.data.recruiter.quote }}</p>
-            </blockquote>
-            <div class="rate-card-summary">
-                <h4>Rate Card Summary</h4>
-                <ul>
-                    {% for rate in site.data.recruiter.rate_summary %}
-                    <li>{{ rate }}</li>
-                    {% endfor %}
-                </ul>
+        <div class="recruiter-cards">
+            <div class="recruiter-card">
+                <h3 class="recruiter-subheading">{{ site.data.recruiter.b2b.subheading }}</h3>
+                <blockquote class="recruiter-quote">
+                    <p>{{ site.data.recruiter.b2b.quote }}</p>
+                </blockquote>
+                <div class="rate-card-summary">
+                    <h4>Rate Card Summary</h4>
+                    <ul>
+                        {% for rate in site.data.recruiter.b2b.rate_summary %}
+                        <li>{{ rate }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <p class="payment-terms"><strong>Payment Terms:</strong> {{ site.data.recruiter.b2b.payment_terms }}</p>
+                {% assign b2b_resume = site.data.resumes | where: "id", "b2b" | first %}
+                {% if b2b_resume %}
+                <a href="{{ b2b_resume.file | relative_url }}" class="btn btn-primary recruiter-download" target="_blank" rel="noopener noreferrer" download>
+                    Download {{ b2b_resume.label }}
+                </a>
+                {% endif %}
             </div>
-            <p class="payment-terms"><strong>Payment Terms:</strong> {{ site.data.recruiter.payment_terms }}</p>
+            <div class="recruiter-card recruiter-card--w2">
+                <h3 class="recruiter-subheading">{{ site.data.recruiter.w2.subheading }}</h3>
+                <blockquote class="recruiter-quote">
+                    <p>{{ site.data.recruiter.w2.quote }}</p>
+                </blockquote>
+                {% assign w2_resume = site.data.resumes | where: "id", "w2" | first %}
+                {% if w2_resume %}
+                <a href="{{ w2_resume.file | relative_url }}" class="btn btn-secondary recruiter-download" target="_blank" rel="noopener noreferrer" download>
+                    Download {{ w2_resume.label }}
+                </a>
+                {% endif %}
+            </div>
         </div>
     </div>
 </section>

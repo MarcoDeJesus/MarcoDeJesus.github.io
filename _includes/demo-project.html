@@ -1,0 +1,33 @@
+<section class="demo-project section" id="demo-project">
+    <div class="container">
+        <h2 class="section-title">{{ site.data.demo_project.heading }}</h2>
+        <div class="demo-project-card">
+            <h3 class="demo-project-title">{{ site.data.demo_project.title }}</h3>
+            <p class="demo-project-description">{{ site.data.demo_project.description }}</p>
+            <ul class="demo-project-highlights">
+                {% for item in site.data.demo_project.highlights %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+            <div class="demo-project-actions">
+                <a href="{{ site.data.demo_project.repo_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    View on GitHub
+                </a>
+                <a href="{{ site.data.demo_project.demo_url }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                    Live Demo
+                </a>
+            </div>
+            <div class="demo-project-reports">
+                <h4>Test Reports</h4>
+                <div class="demo-report-links">
+                    {% for link in site.data.demo_project.report_links %}
+                    <a href="{{ link.url }}" class="demo-report-link" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <p class="demo-project-clone">
+                <code>{{ site.data.demo_project.clone_command }}</code>
+            </p>
+        </div>
+    </div>
+</section>

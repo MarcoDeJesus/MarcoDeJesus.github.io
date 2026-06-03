@@ -1,0 +1,12 @@
+- id: b2b
+  label: "B2B Contractor Resume"
+  file: "Marco_DeJesus_B2B_Contractor.pdf"
+  audience: "1099 / Corp-to-Corp clients"
+  description: "Rates, engagements, ROI — contractor positioning"
+  primary: true
+- id: w2
+  label: "W2 / Full-Time Resume"
+  file: "Marco_DeJesus_Resume_W2.pdf"
+  audience: "Recruiters & hiring managers (W2)"
+  description: "Traditional employment format"
+  primary: false

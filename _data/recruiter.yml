@@ -1,9 +1,13 @@
 heading: "Ready-to-Use for Recruiters"
-subheading: "For US clients:"
-quote: "Marco De Jesus provides QA automation services as a B2B contractor. Remote from Mexico. Invoices in USD. 1099 or Corp-to-Corp. No W2. No benefits. No visa sponsorship. Just results."
-rate_summary:
-  - "Hourly: $85–110 USD"
-  - "Sprint: $6,500–9,500 USD"
-  - "Monthly Retainer: $14,000–20,000 USD"
-  - "Fixed Project: Quote based on scope"
-payment_terms: "Net-30 | Wire / Transfer | Invoiced bi-weekly or monthly"
+b2b:
+  subheading: "For US clients (B2B / contractor):"
+  quote: "Marco De Jesus provides QA automation services as a B2B contractor. Remote from Mexico. Invoices in USD. 1099 or Corp-to-Corp. No benefits overhead. Just results."
+  rate_summary:
+    - "Hourly: $85–110 USD"
+    - "Sprint: $6,500–9,500 USD"
+    - "Monthly Retainer: $14,000–20,000 USD"
+    - "Fixed Project: Quote based on scope"
+  payment_terms: "Net-30 | Wire / Transfer | Invoiced bi-weekly or monthly"
+w2:
+  subheading: "For W2 / full-time roles:"
+  quote: "Marco De Jesus is open to W2 full-time SDET, QA automation lead, and engineering manager roles. 14+ years across API, web, mobile, and AI-powered test infrastructure. Bilingual. Remote from Mexico (US time zone)."

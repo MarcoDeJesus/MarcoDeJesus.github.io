@@ -695,6 +695,64 @@
 
 .resume-download {
     margin-top: $spacing-xl;
+
+    &--compact {
+        margin-top: $spacing-lg;
+    }
+}
+
+.resumes-intro {
+    text-align: center;
+    color: $text-light;
+    margin: (-$spacing-sm) auto $spacing-lg;
+    max-width: 640px;
+}
+
+.resume-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-lg;
+
+    @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.resume-card {
+    background-color: $bg-light;
+    border-radius: $radius-lg;
+    padding: $spacing-lg;
+    border: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+
+    &--primary {
+        border-color: $primary-color;
+    }
+}
+
+.resume-card-title {
+    margin: 0 0 $spacing-xs;
+    color: $text-dark;
+    font-size: 1.15rem;
+}
+
+.resume-card-audience {
+    margin: 0 0 $spacing-sm;
+    color: $primary-color;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.resume-card-description {
+    margin: 0 0 $spacing-md;
+    color: $text-light;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.contact-intro--w2 {
+    margin-top: $spacing-sm;
 }
 
 // B2B: Hero contact line
@@ -812,12 +870,27 @@
     font-size: 0.95rem;
 }
 
-// B2B: Recruiter card
+// B2B: Recruiter cards
+.recruiter-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-lg;
+
+    @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+    }
+}
+
 .recruiter-card {
     background-color: $bg-light;
     border-radius: $radius-lg;
     padding: $spacing-lg;
     border: 1px solid $border-color;
+}
+
+.recruiter-download {
+    margin-top: $spacing-md;
+    display: inline-block;
 }
 
 .recruiter-subheading {
@@ -880,12 +953,108 @@
     margin-top: $spacing-xl;
 }
 
+// Technical demo repository
+.demo-project-card {
+    background-color: $bg-light;
+    border-radius: $radius-lg;
+    padding: $spacing-lg;
+    border: 1px solid $border-color;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.demo-project-title {
+    margin: 0 0 $spacing-sm;
+    color: $text-dark;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.demo-project-description {
+    margin: 0 0 $spacing-md;
+    color: $text-light;
+}
+
+.demo-project-highlights {
+    margin: 0 0 $spacing-lg;
+    padding-left: $spacing-lg;
+
+    li {
+        margin-bottom: $spacing-xs;
+        color: $text-dark;
+    }
+}
+
+.demo-project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+}
+
+.demo-project-reports {
+    margin-bottom: $spacing-md;
+
+    h4 {
+        margin-bottom: $spacing-sm;
+        color: $text-dark;
+    }
+}
+
+.demo-report-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+}
+
+.demo-report-link {
+    display: inline-block;
+    padding: $spacing-xs $spacing-sm;
+    background-color: $bg-white;
+    border: 1px solid $border-color;
+    border-radius: $radius-md;
+    font-size: 0.9rem;
+    color: $primary-color;
+    font-weight: 500;
+
+    &:hover {
+        border-color: $primary-color;
+        background-color: rgba($primary-color, 0.05);
+    }
+}
+
+.demo-project-clone {
+    margin: 0;
+    font-size: 0.85rem;
+    color: $text-light;
+
+    code {
+        display: block;
+        padding: $spacing-sm $spacing-md;
+        background-color: $bg-white;
+        border-radius: $radius-md;
+        border: 1px solid $border-color;
+        overflow-x: auto;
+        color: $text-dark;
+        font-size: 0.8rem;
+    }
+}
+
 .social-btn.demo {
     background-color: $accent-color;
     color: white;
 
     &:hover {
         background-color: darken($accent-color, 10%);
+    }
+}
+
+.social-btn.repo {
+    background-color: $text-dark;
+    color: white;
+
+    &:hover {
+        background-color: lighten($text-dark, 10%);
     }
 }
 
