@@ -21,6 +21,7 @@
                     </div>
                 </div>
 
+                {% if site.b2b_enabled %}
                 <p class="hero-fork-prompt">{{ site.data.contact.hero_fork_prompt }}</p>
                 <div class="path-fork-cards">
                     <a href="#{{ site.data.paths.b2b.anchor }}" class="path-fork-card path-fork-card--b2b">
@@ -32,6 +33,15 @@
                         <span class="path-fork-card-teaser">{{ site.data.paths.w2.card_teaser }}</span>
                     </a>
                 </div>
+                {% else %}
+                <p class="hero-fork-prompt">{{ site.data.contact.hero_fork_prompt_w2_only }}</p>
+                <div class="path-fork-cards path-fork-cards--single">
+                    <a href="#{{ site.data.paths.w2.anchor }}" class="path-fork-card path-fork-card--w2">
+                        <span class="path-fork-card-label">{{ site.data.paths.w2.label }}</span>
+                        <span class="path-fork-card-teaser">{{ site.data.paths.w2.card_teaser }}</span>
+                    </a>
+                </div>
+                {% endif %}
 
                 <div class="hero-actions">
                     <a href="{{ site.data.contact.demo_url }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Live Demo</a>
@@ -42,7 +52,7 @@
         </div>
     </div>
     <div class="hero-scroll">
-        <a href="#work-with-me" class="scroll-indicator" aria-label="Scroll to work with me section">
+        <a href="#work-with-me" class="scroll-indicator" aria-label="Scroll to resume section">
             <span></span>
         </a>
     </div>

@@ -136,6 +136,11 @@
     @media (max-width: $breakpoint-md) {
         grid-template-columns: 1fr;
     }
+
+    &--single {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
 }
 
 .path-fork-card {
@@ -255,16 +260,24 @@
 .competencies-list {
     list-style: none;
     padding: 0;
-    
+    margin: 0;
+
     li {
-        padding: $spacing-xs 0;
-        padding-left: $spacing-lg;
+        padding: $spacing-sm 0;
+        padding-left: 1.75rem;
         position: relative;
-        
+        border-bottom: 1px solid $border-color;
+        line-height: 1.6;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
         &::before {
             content: '✓';
             position: absolute;
             left: 0;
+            top: $spacing-sm;
             color: $accent-color;
             font-weight: bold;
         }
@@ -969,23 +982,6 @@
     font-style: italic;
     color: $text-light;
     margin-top: $spacing-sm;
-}
-
-// B2B: Core competencies
-.competencies-b2b {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-        padding: $spacing-sm 0;
-        border-bottom: 1px solid $border-color;
-        line-height: 1.6;
-
-        &:last-child {
-            border-bottom: none;
-        }
-    }
 }
 
 .employment-badge {

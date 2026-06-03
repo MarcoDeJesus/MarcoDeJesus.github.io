@@ -4,10 +4,10 @@
         <div class="contact-content">
             <div class="contact-info">
                 <p class="contact-intro">
-                    {{ site.data.contact.contact_intro }}
+                    {% if site.b2b_enabled %}{{ site.data.contact.contact_intro }}{% else %}{{ site.data.contact.contact_intro_w2_only }}{% endif %}
                 </p>
                 <p class="contact-path-hint">
-                    <a href="#work-with-me">{{ site.data.contact.contact_path_hint }}</a>
+                    <a href="#work-with-me">{% if site.b2b_enabled %}{{ site.data.contact.contact_path_hint }}{% else %}{{ site.data.contact.contact_path_hint_w2_only }}{% endif %}</a>
                 </p>
                 <div class="contact-details">
                     <div class="contact-item">
@@ -24,6 +24,7 @@
                             <a href="tel:{{ site.data.contact.phone }}">{{ site.data.contact.phone }}</a>
                         </div>
                     </div>
+                    {% if site.b2b_enabled %}
                     <div class="contact-item">
                         <span class="contact-icon">📍</span>
                         <div class="contact-text">
@@ -31,10 +32,11 @@
                             <span>{{ site.data.contact.location_b2b }}</span>
                         </div>
                     </div>
+                    {% endif %}
                     <div class="contact-item">
                         <span class="contact-icon">📍</span>
                         <div class="contact-text">
-                            <strong>W2</strong>
+                            <strong>{% if site.b2b_enabled %}W2{% else %}Role{% endif %}</strong>
                             <span>{{ site.data.contact.location_w2 }}</span>
                         </div>
                     </div>

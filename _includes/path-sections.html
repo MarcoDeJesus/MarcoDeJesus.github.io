@@ -1,13 +1,14 @@
 <section class="path-sections section" id="work-with-me">
     <div class="container">
-        <h2 class="section-title">How We Can Work Together</h2>
-        <p class="path-sections-intro">{{ site.data.contact.path_sections_intro }}</p>
+        <h2 class="section-title">{% if site.b2b_enabled %}{{ site.data.contact.path_sections_title }}{% else %}{{ site.data.contact.path_sections_title_w2_only }}{% endif %}</h2>
+        <p class="path-sections-intro">{% if site.b2b_enabled %}{{ site.data.contact.path_sections_intro }}{% else %}{{ site.data.contact.path_sections_intro_w2_only }}{% endif %}</p>
 
         {% assign b2b = site.data.paths.b2b %}
         {% assign w2 = site.data.paths.w2 %}
         {% assign b2b_resume = site.data.resumes | where: "id", b2b.resume_id | first %}
         {% assign w2_resume = site.data.resumes | where: "id", w2.resume_id | first %}
 
+        {% if site.b2b_enabled %}
         <div class="path-section path-section--b2b" id="{{ b2b.anchor }}">
             <div class="path-section-header">
                 <span class="path-section-label">{{ b2b.label }}</span>
@@ -27,6 +28,7 @@
             </a>
             {% endif %}
         </div>
+        {% endif %}
 
         <div class="path-section path-section--w2" id="{{ w2.anchor }}">
             <div class="path-section-header">
@@ -41,7 +43,7 @@
                 {% endfor %}
             </ul>
             {% if w2_resume %}
-            <a href="{{ w2_resume.file | relative_url }}" class="btn btn-secondary path-download" target="_blank" rel="noopener noreferrer" download>
+            <a href="{{ w2_resume.file | relative_url }}" class="btn {% if site.b2b_enabled %}btn-secondary{% else %}btn-primary{% endif %} path-download" target="_blank" rel="noopener noreferrer" download>
                 Download {{ w2_resume.label }}
             </a>
             {% endif %}

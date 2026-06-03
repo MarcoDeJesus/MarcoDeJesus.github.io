@@ -6,7 +6,7 @@
                 <p>{{ site.data.contact.tagline }}</p>
                 <p class="footer-locations">
                     {{ site.data.contact.current_role }}<br>
-                    {{ site.data.contact.location_b2b }}<br>
+                    {% if site.b2b_enabled %}{{ site.data.contact.location_b2b }}<br>{% endif %}
                     {{ site.data.contact.location_w2 }}
                 </p>
             </div>

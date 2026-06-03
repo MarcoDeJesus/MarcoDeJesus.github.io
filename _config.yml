@@ -1,6 +1,7 @@
 # Site Settings
 title: "Marco De Jesus — SDET & QA Automation"
-description: "14+ years QA automation and SDET leadership. B2B via US LLC (C2C, W-9, remote from Mexico) or W2 employment resume. Currently W2 FTE on-site at Axos Bank, San Diego."
+description: "14+ years QA automation and SDET leadership. W2 FTE on-site at Axos Bank, San Diego. Employment resume and technical portfolio for recruiters."
+b2b_enabled: false
 author: "Marco De Jesus"
 email: "marco_dejesus@live.com"
 url: "https://marcodejesus.github.io"

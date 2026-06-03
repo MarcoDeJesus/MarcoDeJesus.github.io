@@ -1,7 +1,7 @@
 <section class="experience section" id="experience">
     <div class="container">
         <h2 class="section-title">Professional Experience</h2>
-        <p class="experience-intro">14+ years as a full-time employee — currently W2 FTE, 100% on-site at Axos Bank (San Diego, CA); earlier full-time roles in Mexico. The B2B path above describes future/vendor hiring via a US LLC (C2C); the W2 resume is for employment-style review of the same career.</p>
+        <p class="experience-intro">{% if site.b2b_enabled %}14+ years as a full-time employee — currently W2 FTE, 100% on-site at Axos Bank (San Diego, CA); earlier full-time roles in Mexico. The B2B path above describes vendor hiring via a US LLC (C2C); the W2 resume is for employment-style review of the same career.{% else %}14+ years as a full-time employee — currently W2 FTE, 100% on-site at Axos Bank (San Diego, CA); earlier full-time roles in Mexico.{% endif %}</p>
         <div class="experience-timeline">
             {% for job in site.data.experience %}
             <div class="timeline-item">

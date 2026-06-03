@@ -15,10 +15,10 @@ w2:
   anchor: path-w2
   location: "Employment history — payroll FTE"
   headline: "W2 employee track record (reference resume)"
-  summary: "Resume format for payroll / FTE evaluation. Marco is currently W2 FTE at Axos Bank (100% on-site, San Diego, CA). Earlier roles were full-time employees in Mexico. Use this PDF when you need a traditional employment narrative — not the B2B LLC contracting path."
+  summary: "Resume format for payroll / FTE evaluation. Marco is currently W2 FTE at Axos Bank (100% on-site, San Diego, CA). Earlier roles were full-time employees in Mexico. Use this PDF for a traditional employment narrative."
   card_teaser: "Employment resume · current role at Axos Bank"
   resume_id: w2
   highlights:
     - "Current: W2 FTE, 100% on-site at Axos Bank, San Diego, CA"
     - "Prior full-time roles in Mexico (OfferUp, EPAM, Cognizant, and others)"
-    - "Same technical depth as B2B path — different hiring paperwork"
+    - "Enterprise API, web, mobile, and AI-powered test automation — 14+ years"

@@ -1,6 +1,6 @@
 # Marco De Jesus — SDET & QA Automation (GitHub Pages)
 
-Jekyll portfolio for tech recruiters: dual path — B2B via US LLC (C2C, W-9, remote from Mexico) or W2 employment resume (track record). One PDF download per path.
+Jekyll portfolio for tech recruiters. W2 employment resume and experience (B2B/LLC path hidden via `b2b_enabled: false` in `_config.yml` until LLC is ready).
 
 ## Live Site
 
