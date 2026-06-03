@@ -1,24 +1,24 @@
 b2b:
-  label: "B2B Contractor"
+  label: "B2B / C2C (US LLC)"
   anchor: path-b2b
-  location: "Remote from Mexico (US time zone)"
-  headline: "1099 / Corp-to-Corp — automation infrastructure on demand"
-  summary: "For organizations that hire SDET talent as a contractor. Invoices in USD, net-30. Ideal when you need automation depth without FTE headcount — ROI, coverage, and release velocity as the deliverables."
-  card_teaser: "1099/C2C · remote Mexico · rates & contractor resume"
+  location: "US LLC · USD invoicing · services delivered remotely from Mexico (US time zone)"
+  headline: "Corp-to-corp via US single-member LLC — automation infrastructure on demand"
+  summary: "For US organizations that contract with a vendor, not payroll. Invoices in USD (net-30) from a US LLC with a US bank account; W-9 on request. Work is performed remotely from Mexico with US time-zone alignment — ideal when you need SDET depth without FTE headcount."
+  card_teaser: "US LLC · C2C · W-9 · remote delivery from Mexico"
   resume_id: b2b
   highlights:
-    - "Hourly, sprint, project, and monthly retainer models"
-    - "API, web, mobile, and AI-powered automation"
-    - "14+ years — bilingual, US timezone aligned"
+    - "Corp-to-corp (C2C) — contract with US LLC, not individual 1099 from abroad"
+    - "Hourly, sprint, project, and monthly retainer models (USD)"
+    - "API, web, mobile, and AI-powered automation — 14+ years, bilingual"
 w2:
-  label: "W2 Full-Time"
+  label: "W2 / Employment Record"
   anchor: path-w2
-  location: "United States — FTE on-site or hybrid"
-  headline: "W2 employee — SDET, QA lead, or engineering manager"
-  summary: "For organizations that hire on payroll. Marco is W2 FTE at Axos Bank today (100% on-site, San Diego, CA). Prior roles were full-time employees in Mexico. Use this resume when your reqs call for a traditional W2 hire."
-  card_teaser: "W2 FTE · on-site US · employment resume"
+  location: "Employment history — payroll FTE"
+  headline: "W2 employee track record (reference resume)"
+  summary: "Resume format for payroll / FTE evaluation. Marco is currently W2 FTE at Axos Bank (100% on-site, San Diego, CA). Earlier roles were full-time employees in Mexico. Use this PDF when you need a traditional employment narrative — not the B2B LLC contracting path."
+  card_teaser: "Employment resume · current role at Axos Bank"
   resume_id: w2
   highlights:
-    - "Currently W2 FTE, 100% on-site at Axos Bank, San Diego"
-    - "Enterprise API, web, and mobile test architecture"
-    - "Team leadership, mentoring, and CI/CD ownership"
+    - "Current: W2 FTE, 100% on-site at Axos Bank, San Diego, CA"
+    - "Prior full-time roles in Mexico (OfferUp, EPAM, Cognizant, and others)"
+    - "Same technical depth as B2B path — different hiring paperwork"

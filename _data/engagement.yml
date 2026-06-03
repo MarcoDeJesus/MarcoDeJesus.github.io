@@ -1,5 +1,5 @@
 heading: "B2B Rate Card"
-payment_note: "All rates USD. Invoiced net-30. Wire / transfer. Contractor delivery only — no overhead."
+payment_note: "All rates USD. Invoiced net-30 from US LLC to US bank. Corp-to-corp (C2C); W-9 provided. Services delivered remotely from Mexico."
 models:
   - model: "Hourly"
     rate: "$85 – $110/hr"
