@@ -1,36 +1,34 @@
-# Marco De Jesus — B2B Portfolio (GitHub Pages)
+# Marco De Jesus — SDET & QA Automation (GitHub Pages)
 
-Jekyll site for B2B automation services positioning (primary) with W2 full-time option: rates, engagements, technical portfolio with business impact, dual resume downloads, and recruiter-ready copy.
+Jekyll portfolio for tech recruiters and hiring managers: dual path (B2B contractor from Mexico or W2 full-time in the USA), professional experience, technical demo repo, and one resume download per path.
 
 ## Live Site
 
 - **Portfolio:** [https://marcodejesus.github.io](https://marcodejesus.github.io)
 - **Technical demo:** [Live demo](https://marcodejesus.github.io/ecommerce-fullstack-automation-portfolio/)
-- **Demo repository:** [ecommerce-fullstack-automation-portfolio](https://github.com/MarcoDeJesus/ecommerce-fullstack-automation-portfolio)
+- **GitHub project:** [ecommerce-fullstack-automation-portfolio](https://github.com/MarcoDeJesus/ecommerce-fullstack-automation-portfolio)
 
-## Sections
+## Page flow (landing fork)
 
-1. **Hero** — Dual tagline; B2B/W2 resume CTAs; contact, live demo, GitHub (demo repo)
-2. **Value Proposition** — B2B + W2 positioning
-3. **For Tech Recruiters** (`#for-recruiters`) — B2B and W2 paths with PDF downloads (`#recruiter-b2b`, `#recruiter-w2`)
-4. **Engagement Model** — B2B rate card (W2 note points to recruiters section)
-5. **Core Competencies** — Measurable impact bullets
-6. **Technical Portfolio** — Technology → business result table
-7. **Technical Demo Repository** (`#demo-project`) — GitHub repo, live demo, test reports
-8. **Professional Engagements** — Top 5 contractor/client roles
-9. **Earlier Engagements** — Compact history table
-10. **Technical Proficiency** — Skills by domain
-11. **Education & Certifications** — Degrees, certs, languages
-12. **Contact** — Dual availability + link to recruiter resumes
-
-`enhanced_resume.pdf` is excluded from the Jekyll build (not published).
+1. **Hero** — Choose B2B or W2 path cards (scroll to dedicated section)
+2. **Value Proposition** — Neutral impact statement
+3. **How We Can Work Together** (`#work-with-me`) — `#path-b2b` (rates + B2B PDF) and `#path-w2` (W2 PDF)
+4. **Core Competencies** — Shared skills
+5. **Technical Portfolio** — Tools → business impact
+6. **Technical Demo Repository** (`#demo-project`)
+7. **Professional Experience** — Timeline with employment badges (W2, Contract, Contractor)
+8. **Earlier Experience** — Compact history table
+9. **Skills & Education**
+10. **Contact** — Neutral intro; link back to path sections (no duplicate resume buttons)
 
 ## Resume PDFs
 
-| File | Audience |
-|------|----------|
-| `Marco_DeJesus_B2B_Contractor.pdf` | 1099 / Corp-to-Corp — rates, engagements, ROI |
-| `Marco_DeJesus_Resume_W2.pdf` | W2 / full-time — traditional employment format |
+| File | Path |
+|------|------|
+| `Marco_DeJesus_B2B_Contractor.pdf` | Download only under `#path-b2b` |
+| `Marco_DeJesus_Resume_W2.pdf` | Download only under `#path-w2` |
+
+`enhanced_resume.pdf` is excluded from the Jekyll build.
 
 ## Local Development
 
@@ -46,17 +44,14 @@ Open [http://localhost:4000](http://localhost:4000)
 
 | File | Purpose |
 |------|---------|
-| `_data/contact.yml` | Name, tagline, location, demo URL |
-| `_data/value_proposition.yml` | Main blockquote |
-| `_data/engagement.yml` | Rate table |
-| `_data/competencies.yml` | Core competencies |
-| `_data/technical_portfolio.yml` | Tools → impact |
-| `_data/demo_project.yml` | Ecommerce automation demo repo, reports, clone command |
-| `_data/experience.yml` | Main engagements (5) |
-| `_data/earlier_engagements.yml` | Earlier roles table |
-| `_data/skills.yml` | Technical proficiency |
-| `_data/recruiter.yml` | B2B + W2 recruiter blocks |
-| `_data/resumes.yml` | Resume PDF paths and labels |
+| `_data/contact.yml` | Name, tagline, locations, social links |
+| `_data/paths.yml` | B2B vs W2 path copy and anchors |
+| `_data/value_proposition.yml` | Neutral blockquote |
+| `_data/engagement.yml` | B2B rate table (shown under path-b2b only) |
+| `_data/resumes.yml` | PDF paths and labels |
+| `_data/experience.yml` | Professional experience timeline |
+| `_data/earlier_experience.yml` | Earlier roles table |
+| `_data/demo_project.yml` | Demo repo, reports, clone command |
 
 ## Deploy
 

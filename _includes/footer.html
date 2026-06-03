@@ -4,13 +4,16 @@
             <div class="footer-section">
                 <h3>{{ site.data.contact.name }}</h3>
                 <p>{{ site.data.contact.tagline }}</p>
+                <p class="footer-locations">
+                    B2B: {{ site.data.contact.location_b2b }}<br>
+                    W2: {{ site.data.contact.location_w2 }}
+                </p>
             </div>
             <div class="footer-section">
                 <h4>Contact</h4>
                 <ul class="footer-links">
                     <li><a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></li>
                     <li><a href="tel:{{ site.data.contact.phone }}">{{ site.data.contact.phone }}</a></li>
-                    <li>{{ site.data.contact.location }}</li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -26,4 +29,3 @@
         </div>
     </div>
 </footer>
-

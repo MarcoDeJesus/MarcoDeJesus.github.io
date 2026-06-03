@@ -4,13 +4,10 @@
         <div class="contact-content">
             <div class="contact-info">
                 <p class="contact-intro">
-                    {{ site.data.contact.availability_b2b }}
+                    {{ site.data.contact.contact_intro }}
                 </p>
-                <p class="contact-intro contact-intro--w2">
-                    {{ site.data.contact.availability_w2 }}
-                </p>
-                <p class="contact-recruiter-cta">
-                    <a href="#for-recruiters">Download B2B or W2 resume</a>
+                <p class="contact-path-hint">
+                    <a href="#work-with-me">Choose B2B or W2 above</a> to see rates, scope, and the right resume.
                 </p>
                 <div class="contact-details">
                     <div class="contact-item">
@@ -30,8 +27,15 @@
                     <div class="contact-item">
                         <span class="contact-icon">📍</span>
                         <div class="contact-text">
-                            <strong>Location</strong>
-                            <span>{{ site.data.contact.location }}</span>
+                            <strong>B2B</strong>
+                            <span>{{ site.data.contact.location_b2b }}</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div class="contact-text">
+                            <strong>W2</strong>
+                            <span>{{ site.data.contact.location_w2 }}</span>
                         </div>
                     </div>
                 </div>

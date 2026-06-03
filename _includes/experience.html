@@ -1,6 +1,7 @@
 <section class="experience section" id="experience">
     <div class="container">
-        <h2 class="section-title">Professional Engagements</h2>
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="experience-intro">14+ years across enterprise QA, automation architecture, and engineering leadership — same track record whether you hire B2B or W2.</p>
         <div class="experience-timeline">
             {% for job in site.data.experience %}
             <div class="timeline-item">
@@ -12,10 +13,10 @@
                         <div class="job-meta">
                             <span class="job-location">{{ job.location }}</span>
                             <span class="job-dates">{{ job.start_date }} – {{ job.end_date }} ({{ job.duration }})</span>
+                            {% if job.employment_type != "" %}
+                            <span class="employment-badge employment-badge--{{ job.employment_type | downcase }}">{{ job.employment_type }}</span>
+                            {% endif %}
                         </div>
-                        {% if job.engagement_type != "" %}
-                        <p class="job-engagement-type"><em>{{ job.engagement_type }}</em></p>
-                        {% endif %}
                     </div>
                     <div class="job-achievements">
                         <ul class="achievements-list">

@@ -1,0 +1,50 @@
+<section class="path-sections section" id="work-with-me">
+    <div class="container">
+        <h2 class="section-title">How We Can Work Together</h2>
+        <p class="path-sections-intro">Two ways to hire Marco — pick the path that matches your role.</p>
+
+        {% assign b2b = site.data.paths.b2b %}
+        {% assign w2 = site.data.paths.w2 %}
+        {% assign b2b_resume = site.data.resumes | where: "id", b2b.resume_id | first %}
+        {% assign w2_resume = site.data.resumes | where: "id", w2.resume_id | first %}
+
+        <div class="path-section path-section--b2b" id="{{ b2b.anchor }}">
+            <div class="path-section-header">
+                <span class="path-section-label">{{ b2b.label }}</span>
+                <p class="path-section-location">{{ b2b.location }}</p>
+            </div>
+            <h3 class="path-section-headline">{{ b2b.headline }}</h3>
+            <p class="path-section-summary">{{ b2b.summary }}</p>
+            <ul class="path-section-highlights">
+                {% for item in b2b.highlights %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+            {% include rates-table.html %}
+            {% if b2b_resume %}
+            <a href="{{ b2b_resume.file | relative_url }}" class="btn btn-primary path-download" target="_blank" rel="noopener noreferrer" download>
+                Download {{ b2b_resume.label }}
+            </a>
+            {% endif %}
+        </div>
+
+        <div class="path-section path-section--w2" id="{{ w2.anchor }}">
+            <div class="path-section-header">
+                <span class="path-section-label">{{ w2.label }}</span>
+                <p class="path-section-location">{{ w2.location }}</p>
+            </div>
+            <h3 class="path-section-headline">{{ w2.headline }}</h3>
+            <p class="path-section-summary">{{ w2.summary }}</p>
+            <ul class="path-section-highlights">
+                {% for item in w2.highlights %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+            {% if w2_resume %}
+            <a href="{{ w2_resume.file | relative_url }}" class="btn btn-secondary path-download" target="_blank" rel="noopener noreferrer" download>
+                Download {{ w2_resume.label }}
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</section>

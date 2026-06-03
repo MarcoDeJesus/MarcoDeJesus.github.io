@@ -1,0 +1,24 @@
+b2b:
+  label: "B2B Contractor"
+  anchor: path-b2b
+  location: "Remote from Mexico (US time zone)"
+  headline: "1099 / Corp-to-Corp — automation infrastructure on demand"
+  summary: "Deliver test automation infrastructure as a solo contractor. Invoices in USD, net-30. No W2 overhead — focused on measurable ROI, coverage, and release velocity."
+  card_teaser: "Remote Mexico · 1099/C2C · rates & contractor resume"
+  resume_id: b2b
+  highlights:
+    - "Hourly, sprint, project, and monthly retainer models"
+    - "API, web, mobile, and AI-powered automation"
+    - "14+ years — bilingual, US timezone aligned"
+w2:
+  label: "W2 Full-Time"
+  anchor: path-w2
+  location: "United States (W2 employment)"
+  headline: "Full-time SDET, QA automation lead, or engineering manager"
+  summary: "Open to W2 roles with US employers. 14+ years building enterprise test frameworks, leading teams, and shipping AI-assisted automation at scale."
+  card_teaser: "USA full-time · SDET / QA leadership · employment resume"
+  resume_id: w2
+  highlights:
+    - "Enterprise API, web, and mobile test architecture"
+    - "Team leadership, mentoring, and CI/CD ownership"
+    - "Bilingual — based in Mexico, aligned to US time zones"

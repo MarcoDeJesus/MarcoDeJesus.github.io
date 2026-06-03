@@ -6,7 +6,7 @@
                     <span class="hero-name">{{ site.data.contact.name | upcase }}</span>
                 </h1>
                 <p class="hero-subtitle">{{ site.data.contact.tagline }}</p>
-                <p class="hero-location">📍 {{ site.data.contact.location }}</p>
+                <p class="hero-location">📍 {{ site.data.contact.location_b2b }} · {{ site.data.contact.location_w2 }}</p>
                 <p class="hero-contact-line">
                     <a href="tel:{{ site.data.contact.phone }}">📞 {{ site.data.contact.phone }}</a>
                     <span class="contact-sep">|</span>
@@ -20,22 +20,29 @@
                         <span class="highlight-text">6-month backlog → eliminated in 4 weeks | API 40% → 95%</span>
                     </div>
                 </div>
-                <div class="hero-actions hero-actions--recruiter">
-                    <div class="hero-actions-primary">
-                        <a href="#recruiter-b2b" class="btn btn-primary">B2B Resume</a>
-                        <a href="#recruiter-w2" class="btn btn-secondary">W2 Resume</a>
-                    </div>
-                    <div class="hero-actions-secondary">
-                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
-                        <a href="{{ site.data.contact.demo_url }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                        <a href="{{ site.data.contact.github }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
+
+                <p class="hero-fork-prompt">I'm hiring for:</p>
+                <div class="path-fork-cards">
+                    <a href="#{{ site.data.paths.b2b.anchor }}" class="path-fork-card path-fork-card--b2b">
+                        <span class="path-fork-card-label">{{ site.data.paths.b2b.label }}</span>
+                        <span class="path-fork-card-teaser">{{ site.data.paths.b2b.card_teaser }}</span>
+                    </a>
+                    <a href="#{{ site.data.paths.w2.anchor }}" class="path-fork-card path-fork-card--w2">
+                        <span class="path-fork-card-label">{{ site.data.paths.w2.label }}</span>
+                        <span class="path-fork-card-teaser">{{ site.data.paths.w2.card_teaser }}</span>
+                    </a>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="{{ site.data.contact.demo_url }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    <a href="{{ site.data.contact.github }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="#contact" class="btn btn-outline">Contact</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="hero-scroll">
-        <a href="#for-recruiters" class="scroll-indicator" aria-label="Scroll to recruiters section">
+        <a href="#work-with-me" class="scroll-indicator" aria-label="Scroll to work with me section">
             <span></span>
         </a>
     </div>

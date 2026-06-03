@@ -114,26 +114,81 @@
     gap: $spacing-md;
     justify-content: center;
     flex-wrap: wrap;
-
-    &--recruiter {
-        flex-direction: column;
-        align-items: center;
-        gap: $spacing-md;
-    }
+    margin-top: $spacing-md;
 }
 
-.hero-actions-primary,
-.hero-actions-secondary {
-    display: flex;
+.hero-fork-prompt {
+    margin: $spacing-lg 0 $spacing-sm;
+    font-weight: 600;
+    color: $text-dark;
+    text-align: center;
+}
+
+.path-fork-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: $spacing-md;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin-bottom: $spacing-lg;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+    }
 }
 
-.hero-actions-primary {
-    .btn {
-        min-width: 140px;
+.path-fork-card {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    padding: $spacing-lg;
+    border-radius: $radius-lg;
+    border: 2px solid $border-color;
+    background-color: $bg-white;
+    text-align: left;
+    transition: border-color $transition-base, box-shadow $transition-base, transform $transition-fast;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-md;
+        text-decoration: none;
     }
+
+    &--b2b {
+        border-color: $primary-color;
+
+        &:hover {
+            border-color: darken($primary-color, 8%);
+        }
+
+        .path-fork-card-label {
+            color: $primary-color;
+        }
+    }
+
+    &--w2 {
+        border-color: $accent-color;
+
+        &:hover {
+            border-color: darken($accent-color, 8%);
+        }
+
+        .path-fork-card-label {
+            color: darken($accent-color, 15%);
+        }
+    }
+}
+
+.path-fork-card-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.path-fork-card-teaser {
+    font-size: 0.9rem;
+    color: $text-light;
+    line-height: 1.4;
 }
 
 .hero-scroll {
@@ -283,10 +338,11 @@
 
 .job-meta {
     display: flex;
-    gap: $spacing-md;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $spacing-sm;
     color: $text-light;
     font-size: 0.875rem;
-    flex-wrap: wrap;
 }
 
 .job-technologies {
@@ -713,66 +769,114 @@
     }
 }
 
-.resume-download {
-    margin-top: $spacing-xl;
-
-    &--compact {
-        margin-top: $spacing-lg;
-    }
-}
-
-.resumes-intro {
+.path-sections-intro {
     text-align: center;
     color: $text-light;
-    margin: (-$spacing-sm) auto $spacing-lg;
+    margin: (-$spacing-sm) auto $spacing-xl;
     max-width: 640px;
 }
 
-.resume-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $spacing-lg;
-
-    @media (max-width: $breakpoint-md) {
-        grid-template-columns: 1fr;
-    }
-}
-
-.resume-card {
+.path-section {
     background-color: $bg-light;
     border-radius: $radius-lg;
-    padding: $spacing-lg;
+    padding: $spacing-xl;
+    margin-bottom: $spacing-xl;
     border: 1px solid $border-color;
-    display: flex;
-    flex-direction: column;
+    scroll-margin-top: 100px;
 
-    &--primary {
-        border-color: $primary-color;
+    &--b2b {
+        border-left: 4px solid $primary-color;
+    }
+
+    &--w2 {
+        border-left: 4px solid $accent-color;
     }
 }
 
-.resume-card-title {
-    margin: 0 0 $spacing-xs;
-    color: $text-dark;
-    font-size: 1.15rem;
+.path-section-header {
+    margin-bottom: $spacing-sm;
 }
 
-.resume-card-audience {
-    margin: 0 0 $spacing-sm;
+.path-section-label {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: $primary-color;
-    font-size: 0.9rem;
-    font-weight: 600;
 }
 
-.resume-card-description {
-    margin: 0 0 $spacing-md;
+.path-section--w2 .path-section-label {
+    color: darken($accent-color, 15%);
+}
+
+.path-section-location {
+    margin: $spacing-xs 0 0;
     color: $text-light;
     font-size: 0.95rem;
-    flex-grow: 1;
 }
 
-.contact-intro--w2 {
+.path-section-headline {
+    margin: 0 0 $spacing-sm;
+    color: $text-dark;
+}
+
+.path-section-summary {
+    margin: 0 0 $spacing-md;
+    color: $text-light;
+    line-height: 1.6;
+}
+
+.path-section-highlights {
+    margin: 0 0 $spacing-lg;
+    padding-left: $spacing-lg;
+
+    li {
+        margin-bottom: $spacing-xs;
+        color: $text-dark;
+    }
+}
+
+.path-download {
+    margin-top: $spacing-md;
+}
+
+.rates-block {
+    margin: $spacing-lg 0;
+}
+
+.rates-heading {
+    margin-bottom: $spacing-sm;
+    color: $text-dark;
+}
+
+.experience-intro {
+    text-align: center;
+    color: $text-light;
+    margin: (-$spacing-sm) auto $spacing-lg;
+    max-width: 720px;
+}
+
+.contact-path-hint {
+    margin: $spacing-md 0 $spacing-lg;
+    text-align: center;
+    color: $text-light;
+
+    a {
+        color: $primary-color;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer-locations {
     margin-top: $spacing-sm;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.5;
 }
 
 // B2B: Hero contact line
@@ -884,119 +988,31 @@
     }
 }
 
-.job-engagement-type {
-    margin-top: $spacing-xs;
-    color: $text-light;
-    font-size: 0.95rem;
-}
-
-.recruiter-hub-intro {
-    text-align: center;
-    color: $text-light;
-    margin: (-$spacing-sm) auto $spacing-lg;
-    max-width: 640px;
-}
-
-.recruiter-resume-meta {
-    margin: 0 0 $spacing-sm;
-    font-size: 0.9rem;
-    color: $primary-color;
-    font-weight: 600;
-}
-
-.engagement-section-note {
-    text-align: center;
-    color: $text-light;
-    margin: (-$spacing-sm) auto $spacing-md;
-    max-width: 720px;
-}
-
-.contact-recruiter-cta {
-    margin: $spacing-md 0 $spacing-lg;
-    text-align: center;
-
-    a {
-        color: $primary-color;
-        font-weight: 600;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
-// B2B: Recruiter cards
-.recruiter-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $spacing-lg;
-
-    @media (max-width: $breakpoint-md) {
-        grid-template-columns: 1fr;
-    }
-}
-
-.recruiter-card {
-    background-color: $bg-light;
-    border-radius: $radius-lg;
-    padding: $spacing-lg;
-    border: 1px solid $border-color;
-    scroll-margin-top: 100px;
-
-    &--primary {
-        border-color: $primary-color;
-    }
-}
-
-.recruiter-download {
-    margin-top: $spacing-md;
+.employment-badge {
     display: inline-block;
-}
-
-.recruiter-subheading {
-    margin-bottom: $spacing-sm;
+    padding: 2px $spacing-sm;
+    border-radius: $radius-sm;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    background-color: $bg-light;
     color: $text-dark;
-}
+    border: 1px solid $border-color;
 
-.recruiter-quote {
-    border-left: 4px solid $accent-color;
-    margin: $spacing-md 0;
-    padding: $spacing-md $spacing-lg;
-    background-color: $bg-white;
-    border-radius: $radius-md;
-
-    p {
-        margin: 0;
-        font-style: italic;
-        color: $text-dark;
-    }
-}
-
-.rate-card-summary {
-    margin: $spacing-md 0;
-
-    h4 {
-        margin-bottom: $spacing-sm;
+    &--contractor {
+        border-color: $primary-color;
+        color: $primary-color;
     }
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li {
-            padding: $spacing-xs 0;
-            &::before {
-                content: "• ";
-                color: $primary-color;
-            }
-        }
+    &--w2 {
+        border-color: $accent-color;
+        color: darken($accent-color, 15%);
     }
-}
 
-.payment-terms {
-    margin-top: $spacing-md;
-    color: $text-light;
+    &--contract {
+        color: $text-light;
+    }
 }
 
 .languages-list {
