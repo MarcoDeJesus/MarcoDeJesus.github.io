@@ -1,6 +1,6 @@
 # Site Settings
-title: "Marco De Jesus — SDET & QA Automation"
-description: "14+ years QA automation and SDET leadership. W2 FTE on-site at Axos Bank, San Diego. Employment resume and technical portfolio for recruiters."
+title: "Marco De Jesus — AVP, QA Automation Manager"
+description: "AVP, QA Automation Manager with 14+ years in quality and test automation. Currently W2 FTE at Axos Bank, San Diego. Employment resume and technical portfolio."
 b2b_enabled: false
 author: "Marco De Jesus"
 email: "marco_dejesus@live.com"
@@ -46,11 +46,10 @@ defaults:
 # Social Links
 social:
   linkedin: "https://www.linkedin.com/in/marco-antonio-de-jesus-ciriaco/"
-  github: "https://github.com/MarcoDeJesus/ecommerce-fullstack-automation-portfolio"
+  github: "https://github.com/MarcoDeJesus"
   email: "marco_dejesus@live.com"
   phone: "+1 858 933 4510"
 
 # SEO
 lang: en-US
 google_analytics: ""
-

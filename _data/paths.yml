@@ -3,7 +3,7 @@ b2b:
   anchor: path-b2b
   location: "US LLC · USD invoicing · services delivered remotely from Mexico (US time zone)"
   headline: "Corp-to-corp via US single-member LLC — automation infrastructure on demand"
-  summary: "For US organizations that contract with a vendor, not payroll. Invoices in USD (net-30) from a US LLC with a US bank account; W-9 on request. Work is performed remotely from Mexico with US time-zone alignment — ideal when you need SDET depth without FTE headcount."
+  summary: "For US organizations that contract with a vendor, not payroll. Invoices in USD (net-30) from a US LLC with a US bank account; W-9 on request. Work is performed remotely from Mexico with US time-zone alignment."
   card_teaser: "US LLC · C2C · W-9 · remote delivery from Mexico"
   resume_id: b2b
   highlights:
@@ -15,10 +15,10 @@ w2:
   anchor: path-w2
   location: "Employment history — payroll FTE"
   headline: "W2 employee track record (reference resume)"
-  summary: "Resume format for payroll / FTE evaluation. Marco is currently W2 FTE at Axos Bank (100% on-site, San Diego, CA). Earlier roles were full-time employees in Mexico. Use this PDF for a traditional employment narrative."
-  card_teaser: "Employment resume · current role at Axos Bank"
+  summary: "Resume format for payroll / FTE evaluation. Marco is currently AVP, QA Automation Manager (W2 FTE) at Axos Bank in San Diego, CA. Earlier roles were full-time employees in Mexico. Use this PDF for a traditional employment narrative."
+  card_teaser: "Employment resume · AVP at Axos Bank"
   resume_id: w2
   highlights:
-    - "Current: W2 FTE, 100% on-site at Axos Bank, San Diego, CA"
+    - "Current: AVP, QA Automation Manager — W2 FTE at Axos Bank, San Diego, CA"
     - "Prior full-time roles in Mexico (OfferUp, EPAM, Cognizant, and others)"
-    - "Enterprise API, web, mobile, and AI-powered test automation — 14+ years"
+    - "Enterprise API, web, mobile, and AI-assisted test automation — 14+ years"

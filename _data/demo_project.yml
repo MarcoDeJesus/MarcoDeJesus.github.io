@@ -1,6 +1,6 @@
 title: "ecommerce-fullstack-automation-portfolio"
 heading: "Technical Demo Repository"
-description: "Live portfolio piece — B2B ecommerce platform with full-stack implementation and multi-layer test automation. Run the full stack locally in under 2 minutes."
+description: "Live portfolio piece — ecommerce platform with full-stack implementation and multi-layer test automation (proof of Playwright / API / CI stack). Run the full stack locally in under 2 minutes."
 repo_url: "https://github.com/MarcoDeJesus/ecommerce-fullstack-automation-portfolio"
 demo_url: "https://marcodejesus.github.io/ecommerce-fullstack-automation-portfolio/"
 clone_command: "git clone https://github.com/MarcoDeJesus/ecommerce-fullstack-automation-portfolio.git"

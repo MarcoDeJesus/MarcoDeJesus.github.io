@@ -1,3 +1,11 @@
+- category: "Top skills"
+  items:
+    - "Playwright"
+    - "Test Automation"
+    - "Java"
+    - "CI/CD"
+    - "Python"
+
 - category: "AI & Automation"
   items:
     - "Cursor AI"
@@ -10,9 +18,9 @@
 
 - category: "Test Automation"
   items:
+    - "Playwright"
     - "Selenium"
     - "Appium"
-    - "Playwright"
     - "Rest-Assured"
     - "SpecFlow"
     - "TestNG"
@@ -21,8 +29,8 @@
 
 - category: "Languages"
   items:
-    - "Python"
     - "Java"
+    - "Python"
     - "C#"
     - "Ruby"
     - "SQL"

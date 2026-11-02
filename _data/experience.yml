@@ -1,66 +1,81 @@
 - company: "Axos Bank"
-  title: "Sr. SDET — AI Automation & QA Infrastructure"
+  title: "AVP, QA Automation Manager"
   employment_type: "W2"
-  location: "San Diego, CA — 100% on-site"
-  start_date: "April 2022"
+  location: "San Diego, CA — on-site"
+  start_date: "September 15, 2026"
   end_date: "Present"
-  duration: "3y 9m"
+  duration: "2 mos+"
   achievements:
-    - text: "6-month backlog → eliminated in 4 weeks as sole engineer using Cursor AI + Postman Flows + MCP. API coverage 40% → 95%. Costs -75%. Releases +300%."
+    - text: "Promoted to AVP to own QA automation strategy beyond a single team — aligning framework standards, release risk, and engineering enablement with product delivery goals."
       highlight: true
-    - text: "Multi-LLM agent system (Ollama + GPT-4o): test updates -90%. Autonomous test evolution."
+    - text: "Scaling the AI-assisted automation platform already proven in production (Playwright, MCP, multi-LLM workflows) so coverage and daily-release confidence hold as scope grows."
       highlight: true
-    - text: "3-day regression → 1 hour via Playwright + MCP. 90% coverage. Daily releases. Time-to-market -97%."
+    - text: "Leading automation engineers on governance, mentoring, and measurable quality outcomes (coverage, regression time, cost) rather than tool count."
       highlight: true
-    - text: "$50K/year saved by deploying on-prem LLM containers, eliminating external AI dependency."
+
+- company: "Axos Bank"
+  title: "Software QA Automation Manager"
+  employment_type: "W2"
+  location: "San Diego, CA — on-site"
+  start_date: "April 2022"
+  end_date: "September 14, 2026"
+  duration: "4y 6m"
+  achievements:
+    - text: "Inherited a 6-month automation backlog with a 4-person team; rebuilt delivery with Cursor AI, Postman Flows, and MCP and moved API coverage from 40% to 95% in 4 weeks, cutting related cost ~75% and accelerating release throughput ~300%."
+      highlight: true
+    - text: "Cut test-maintenance effort ~90% by shipping a multi-LLM agent flow (Ollama + Azure OpenAI) that updates tests when API contracts change."
+      highlight: true
+    - text: "Collapsed full regression from 3 days to 1 hour with Playwright + MCP across web/mobile/API (~90% coverage), enabling daily releases."
+      highlight: true
+    - text: "Removed ~$50K/year of external AI API spend by running on-prem LLM containers (Ollama) under bank compliance constraints."
       highlight: true
 
 - company: "OfferUp"
-  title: "Sr. SDET — Enterprise API Framework"
+  title: "Sr. Software Development Engineer in Test"
   employment_type: "Full-Time"
-  location: "Remote (Mexico)"
+  location: "Tlaquepaque, Jalisco, Mexico"
   start_date: "July 2021"
   end_date: "March 2022"
   duration: "9 months"
   achievements:
-    - text: "API framework from zero (Java, Rest-Assured, JUnit5). Regression time -70%."
+    - text: "Started API automation from zero: Java + Rest-Assured + JUnit5 framework that cut API regression time ~70% and unlocked daily CI regression."
       highlight: true
-    - text: "Appium iOS/Android automation: 85% coverage. Critical journeys protected."
-    - text: "Team upskilling: code reviews + training → technical debt -30%."
+    - text: "Extended protection to mobile with Appium (iOS/Android), reaching ~85% coverage across critical web and mobile journeys."
+    - text: "Raised team code quality through training and refactoring practice, reducing technical debt ~30%."
 
 - company: "QA Minds Lab"
-  title: "Automation Mentor — Curriculum & Training"
+  title: "Teacher and Mentor"
   employment_type: "Full-Time"
-  location: "Guadalajara, Mexico"
+  location: "Guadalajara, Jalisco, Mexico"
   start_date: "February 2021"
   end_date: "March 2022"
   duration: "14 months"
   achievements:
-    - text: "Created full automation curriculum (Selenium, Java, Maven, TestNG, OOP, design patterns)."
-    - text: "80% of 50+ students hired into automation roles within 6 months."
+    - text: "Built a job-ready automation curriculum (Java, Selenium, Maven, TestNG, OOP, design patterns)."
+    - text: "Within 6 months, ~80% of 50+ students landed automation roles."
       highlight: true
 
 - company: "EPAM Systems"
-  title: "Lead Automation Engineer | Engineering Manager"
+  title: "Lead Software Test Automation Engineer | Software Engineering Manager"
   employment_type: "Full-Time"
-  location: "Mexico"
+  location: "Guadalajara, Mexico Metropolitan Area"
   start_date: "July 2019"
   end_date: "July 2021"
   duration: "2y 1m"
   achievements:
-    - text: "Built 15+ engineer team from hiring to retention. Team competency +40% in Year 1."
+    - text: "Stepped from senior IC into people leadership: full life-cycle ownership for 15+ engineers; competency +40% in year one."
       highlight: true
-    - text: "WinApp Driver + C# framework: 80% coverage from zero for Microsoft desktop apps."
-    - text: "Code review + SOLID: bug rates -25%. Azure DevOps CI/CD: deployment time -60%."
+    - text: "Delivered an 80% automation coverage desktop UI framework (WinApp Driver + C#) for Microsoft-stack apps."
+    - text: "Installed clean-code/SOLID reviews and Azure DevOps CI/CD, cutting bug rates ~25% and manual deployment time ~60%."
 
 - company: "Cognizant"
   title: "Sr. Automation Tester"
   employment_type: "Full-Time"
-  location: "Mexico"
+  location: "Zapopan, México"
   start_date: "December 2018"
   end_date: "July 2019"
   duration: "8 months"
   achievements:
-    - text: "Technical lead for client delivery. 100% requirement coverage."
-    - text: "Canary releases + RestSharp API + Selenium UI: 75% API coverage. Regression -50%. Incidents -35%."
+    - text: "Owned client technical delivery and team upskilling (C#, Git), driving functional testing to 100% requirement coverage."
+    - text: "Ran Canary releases with RestSharp API + Selenium UI: ~75% API coverage, ~50% faster regression, ~35% fewer production incidents."
       highlight: true
